@@ -1,35 +1,23 @@
 import streamlit as st
-import sqlite3
 
-# Connect to the database
-conn = sqlite3.connect("database.db")
+def main():
+    st.title("Login Form")
 
-# Create a cursor
-c = conn.cursor()
+    # Create a form to collect user information
+    with st.form("Login Form"):
+        username = st.text_input("Username")
+        password = st.text_input("Password", type="password")
+        submit_button = st.form_submit_button("Login")
 
-# Create a form to collect the username and password
-username = st.text_input("Username")
-password = st.text_input("Password")
+        if submit_button:
+            # Save the username and password to a file
+            save_credentials(username, password)
+            st.success("Login successful")
 
-# If the user clicks on the submit button
-if st.button("Submit"):
+def save_credentials(username, password):
+    # Save the username and password to a file
+    with open("credentials.txt", "w") as file:
+        file.write(f"Username: {username}, Password: {password}")
 
-    # Insert the username and password into the database
-    # c.execute("INSERT INTO users (username, password) VALUES (?, ?)", (username, password))
-    # conn.commit()
-    
-    cursor = conn.cursor()
-    cursor.execute("""CREATE TABLE IF NOT EXISTS users (
-        username TEXT,
-        password TEXT
-    )""")
-    
-    cursor.execute("INSERT INTO users (username, password) VALUES (?, ?)", (username, password))
-
-    # Commit the changes to the database
-    conn.commit()
-
-    st.write("Username and password saved successfully!")
-
-# Close the connection to the database
-conn.close()
+if __name__ == "__main__":
+    main()
