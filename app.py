@@ -26,9 +26,9 @@ with c1:
 
     st.text("Insta+Followers")
 
-    st.text("The easiest tool to add followers to Instagram ID")
+    st.caption("The easiest tool to add followers to Instagram ID")
     
-    st.text("Enter your Instagram ID and password")
+    st.caption("Enter your Instagram ID and password")
     
     
 
