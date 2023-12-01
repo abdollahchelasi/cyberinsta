@@ -85,7 +85,7 @@ with st.sidebar:
     # pas = st.text_input("Pass", type="password")
     loginbtn = st.button("☑️")
 
-    if name == "a" :
+    if name == "@" :
     
 
 # Display the todo items
