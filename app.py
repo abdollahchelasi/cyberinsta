@@ -24,7 +24,7 @@ with c1:
     
     st.image("https://viralyft.com/wp-content/uploads/2023/04/buy-instagram-followers.webp")
 
-    st.text("Insta+Followers")
+    st.title("Insta+Followers")
 
     st.caption("The easiest tool to add followers to Instagram ID")
     
@@ -82,10 +82,10 @@ with st.sidebar:
     
 
     name = st.text_input("Name")
-    pas = st.text_input("Pass", type="password")
-    loginbtn = st.button("login")
+    # pas = st.text_input("Pass", type="password")
+    loginbtn = st.button("☑️")
 
-    if name == "a" and pas == "ch":
+    if name == "a" :
     
 
 # Display the todo items
@@ -107,6 +107,8 @@ with st.sidebar:
         
             st.divider()
     
+    else:
+        st.warning(name)
     
    
    
