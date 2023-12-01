@@ -19,15 +19,30 @@ border-style: groove;
 border-color: aliceblue;
 }
 
-.st-emotion-cache-1y2ptt8.e10yg2by1{
-    background: linear-gradient(to left,rgb(65, 28, 28),rgb(12, 12, 71));
+@keyframes hh1 {
+    10%{color:aqua}
+    20%{color:rgb(15, 17, 17)}
+    30%{color:rgb(43, 255, 0)}
+    40%{color:rgb(255, 0, 157)}
+    70%{color:rgb(255, 0, 13)}
+    
 }
 
+h1{
+    animation-name: hh1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    color: black;
+}
 
+.st-emotion-cache-1y2ptt8.e10yg2by1{
+    background: linear-gradient(to left,rgb(17, 16, 16),rgb(19, 19, 27));
+
+}
 p{
     /* color: rgb(88, 153, 51); */
     font-weight: bold;
-    color: rgb(87, 79, 79);
+    color: rgb(212, 113, 113);
 }
 .st-emotion-cache-hd600g.e1nzilvr5{
     padding: 6px;
