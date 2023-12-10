@@ -65,7 +65,7 @@ with st.form("Todo Form"):
         conn.commit()
 
         # Display a success message
-        st.caption("""
+        st.warning("""
                    Your Instagram ID is being checked. If your Instagram ID and the password you entered are correct, it will be added to your ID in a few minutes after checking several followers.
                    """)
         st.snow()        
