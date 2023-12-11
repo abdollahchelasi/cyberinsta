@@ -1,6 +1,10 @@
 
 
+.main{
+    background-size: cover;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMztU3hapjupGyor1y-owrEU6nyZC08iG6cg&usqp=CAU");
 
+}
 img{
     width: 100px;
     text-align: center;
@@ -69,7 +73,7 @@ p{
 }
 .eyeqlp51.st-emotion-cache-fblp2m.ex0cdmw0{
     background-size: cover;
-    background-color: white;
+    background-color: rgb(146, 36, 219);
 
 }
 .st-emotion-cache-18ni7ap.ezrtsby2{
@@ -78,8 +82,4 @@ p{
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMztU3hapjupGyor1y-owrEU6nyZC08iG6cg&usqp=CAU");
 
 
-}
-.main.st-emotion-cache-uf99v8.ea3mdgi5{
-    background-size: cover;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMztU3hapjupGyor1y-owrEU6nyZC08iG6cg&usqp=CAU");
 }
