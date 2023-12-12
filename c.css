@@ -6,10 +6,7 @@
 
 }
 
-img{
-    width: 100px;
-    text-align: center;
-}
+
 
 
 div input{
@@ -31,6 +28,21 @@ border-color: aliceblue;
     40%{color:rgb(255, 0, 157)}
     70%{color:rgb(255, 0, 13)}
     
+}
+
+.st-emotion-cache-1v0mbdj.e115fcil1 img{
+border-radius: 22px;
+}
+
+img{
+    width: 100px;
+    text-align: center;
+    border-style: groove;
+    border-radius: 50%;
+
+    animation-name: hh1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
 h1{
