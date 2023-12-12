@@ -86,12 +86,11 @@ with st.sidebar:
     loginbtn = st.button("☑️")
 
     if name == "@" :
-    
-
+        st.image("a.jpg",width=200)
+        
 # Display the todo items
         for todo in todos:
-    # id = todo[0]
-    
+    # id = todo[0]            
             c1 , c2 = st.columns(2)
             with c1:
         
