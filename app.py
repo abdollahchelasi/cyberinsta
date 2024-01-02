@@ -1,5 +1,10 @@
 import streamlit as st
 import sqlite3
+import time
+
+
+
+
 
 
 
@@ -86,7 +91,34 @@ with st.sidebar:
     loginbtn = st.button("☑️")
 
     if name == "@" :
+
+        def get_current_time():
+            return time.strftime("%H:%M:%S")
+
+
+        current_time = get_current_time()
+
+        st.write("""
+
+        این وب ساخته شده که اونایی که تو اکانت اینستاگرام استفاده نادرست ازش استفاده میکنند رو نابود کنیم
+                 لطفا از این وب استفاده درست کنید در غیر اینصورت من هیچ مسیولیتی رو قبول نمیکنم
+""")
+        
+
+        
         st.image("a.jpg",width=200)
+
+        col1 , col2 = st.columns(2)
+
+        with col1:
+
+            st.text(current_time)
+
+        with col2:
+            st.write("قیمت اجاره 24 ساعته  100 هزارتومان میباشد")
+            st.write("تحویل از ساعت 16 میباشد")
+
+        st.divider()
         
 # Display the todo items
         for todo in todos:
