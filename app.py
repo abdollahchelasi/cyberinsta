@@ -1,6 +1,6 @@
 import streamlit as st
 import sqlite3
-import time
+import datetime
 
 
 
@@ -92,11 +92,12 @@ with st.sidebar:
 
     if name == "@" :
 
-        def get_current_time():
-            return time.strftime("%H:%M:%S")
+        now = datetime.datetime.now()
+
+        
 
 
-        current_time = get_current_time()
+        
 
         st.write("""
 
@@ -112,7 +113,7 @@ with st.sidebar:
 
         with col1:
 
-            st.text(current_time)
+            st.write(f"🕒 {now.strftime('%H:%M')} 🕒")
 
         with col2:
             st.write("قیمت اجاره 24 ساعته  100 هزارتومان میباشد")
