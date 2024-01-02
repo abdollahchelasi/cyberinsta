@@ -1,9 +1,11 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
 
 .main{
     background-size: cover;
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMztU3hapjupGyor1y-owrEU6nyZC08iG6cg&usqp=CAU");
 
+    
 }
 
 
@@ -57,6 +59,8 @@ h1{
 
 }
 p{
+    font-family: "Lalezar";
+    direction: rtl;
     /* color: rgb(88, 153, 51); */
     font-weight: bold;
     color: rgb(212, 113, 113);
@@ -67,7 +71,7 @@ p{
     color: black;
 }
 .st-emotion-cache-183lzff.exotz4b0{
-    background-color: rgb(58, 133, 34);
+    box-shadow: rgb(255, 255, 255) 2px 2px 18px;
     border-radius: 4px;
     padding: 5px;
 }
